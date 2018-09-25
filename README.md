@@ -1,3 +1,3 @@
 # algo-lib
-algorithm and data structure library for programming contests.
+algorithm and data structure templates for programming contests.
 
