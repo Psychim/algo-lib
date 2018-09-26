@@ -13,7 +13,6 @@ struct Node{
     }
 };
 Node*null=new Node();
-Node*root=null;
 
 void rotate(Node*&u,int d){
     Node* tmp=u->ch[d];
