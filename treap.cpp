@@ -5,7 +5,6 @@ struct Node{
     Node *ch[2];
 };
 Node*null=new Node();
-Node*root=null;
 void rotate(Node*&u,int d){
     Node* tmp=u->ch[d];
     if(tmp==null) return;

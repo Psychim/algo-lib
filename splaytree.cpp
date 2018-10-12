@@ -87,4 +87,8 @@ bool find(Node*u,int val){
     }
     return false;
 }
-
+int max(Node*u){
+    while(u->ch[1]!=null)
+        u=u->ch[1];
+    return u->v;
+}
