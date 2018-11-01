@@ -8,8 +8,7 @@ struct KMP{
     KMP(string pattern){
         p=pattern;
         nxt[0]=-1;
-        int j=-1;
-        int i=1;
+        int i=1,j=-1;
         while(i<p.size()){
             if(j!=-1&&p[i]!=p[j+1])
                 j=nxt[j];
@@ -17,17 +16,15 @@ struct KMP{
                 nxt[i++]=++j;
             else nxt[i++]=j;
         }
-        for(i=0;i<p.size();++i) printf("%d > %d\n",i,nxt[i]);
+        //for(i=0;i<p.size();++i) printf("%d > %d\n",i,nxt[i]);
     }
     int match(string s){
-        int j=-1;
-        int i=0;
+        int i=0,j=-1;
         while(i<s.size()){
             if(j!=-1&&s[i]!=p[j+1])
                 j=nxt[j];
             else if(s[i++]==p[j+1]&&++j==p.size()-1)
-                    return i-1-j;
-
+                return i-1-j;
         }
         return -1;
     }
